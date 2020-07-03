@@ -1,8 +1,18 @@
-* {
-    box-sizing: border-box;
-}
-
-.conteiner {
-    width: 1088px;
-    margin: 0 auto;
-}
+    :root {
+    --main-color-white: #FFFFFF;
+    --main-color-blue: #08A6E4;
+    --main-color-red: #FB3B64;
+    --main-color-green: #55DFB4;
+    --main-color-black: #000000;
+    --font-raleway: "Raleway", sans-serif;
+    --font-opne: "OpenSan", sans-serif;
+    * {
+        box-sizing: border-box;
+    }
+    a {
+        text-decoration: none;
+    }
+    .conteiner {
+        width: 1088px;
+        margin: 0 auto;
+    }
