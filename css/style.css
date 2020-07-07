@@ -216,6 +216,10 @@ h2 {
     text-align: left;
 }
 
+.benefits-title {
+    text-align: left;
+}
+
 
 /* Dodajemy czerwone podkreślenie pod benefits-text za pomocą zminnnej lokalnej--next color */
 
@@ -310,7 +314,8 @@ h2 {
 .benefits-double-row {
     --next-color: var(--main-color-green);
     display: flex;
-    margin-top: 30px;
+    /* Nie chce mi się margin 0 */
+    margin-top: 0px;
 }
 
 .benefits-double-row>div {
@@ -340,4 +345,283 @@ h2 {
     width: 295px;
     height: auto;
     margin-top: 55px;
+}
+
+
+/* Princing section */
+
+.pricing {
+    margin-top: 100px;
+}
+
+.pricing-boxes {
+    max-width: 1352px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricing-box {
+    width: 362px;
+    border: 1px solid var(--next-color);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-details {
+    margin-top: 34px;
+    margin-bottom: 69px;
+    text-align: center;
+}
+
+.pricing-title {
+    font-size: 20px;
+    font-family: var(--font-family-Raleway);
+    font-weight: 700;
+}
+
+.pricing-price {
+    font-size: 46px;
+    color: var(--next-color);
+    font-weight: 300;
+    margin-top: 25px;
+}
+
+.pricing-limited {
+    font-size: 12px;
+    font-family: var(--font-family-Raleway);
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.pricing-lists {
+    text-align: center;
+}
+
+.pricing-list,
+.pricing-list-no {
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.pricing-list::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-image: url(../assets/Checkmark.svg);
+    border: 1px solid var(--main-color-green);
+    border-radius: 2px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.pricing-list-no::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-image: url(../assets/Close.svg);
+    border: 1px solid var(--main-color-red);
+    border-radius: 2px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.pricing-box .btn {
+    position: relative;
+    bottom: -25px;
+    font-size: 13px;
+    background-color: var(--next-color);
+}
+
+.pricing-box-basic {
+    --next-color: var(--main-color-red);
+}
+
+.pricing-box-basic .pricing-price {
+    margin-bottom: 30px;
+}
+
+.pricing-box-professional {
+    --next-color: var(--main-color-blue);
+    width: 400px;
+    margin: 0 40px;
+    box-shadow: 5px 1px 27px #07ACE629;
+}
+
+.pricing-box-professional .pricing-title {
+    font-size: 21px;
+}
+
+.pricing-box-professional .pricing-list {
+    margin-bottom: 25px;
+}
+
+.pricing-box-premium {
+    --next-color: var(--main-color-green);
+}
+
+
+/* Sekcja formularz */
+
+.contact {
+    padding: 80px 100px 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-column {
+    width: 50%;
+}
+
+.contact-title {
+    font-size: 49px;
+    line-height: 3.6875rem;
+}
+
+.contact-instruction {
+    margin: 22px 0 42px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: flex-start;
+    color: var(--main-color-gray);
+    align-items: center;
+}
+
+.details-item {
+    color: var(--main-color-gray);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.details-item:first-of-type {
+    margin-right: 20px;
+}
+
+.details-item img {
+    margin-right: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field:first-of-type {
+    margin-bottom: 42px;
+}
+
+.form-label {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--main-color-blue);
+    line-height: 0.9rem;
+    letter-spacing: 3px;
+    font-size: 0.6875rem;
+}
+
+.form-input {
+    border: none;
+    border-bottom: 1px solid var(--main-color-gray);
+    background-color: transparent;
+    line-height: 2.625rem;
+}
+
+.form-consent {
+    margin-top: 30px;
+}
+
+.form-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.form-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.form-checkbox .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--main-color-white);
+    border: 1px solid var(--main-color-gray);
+    border-radius: 4px;
+}
+
+.form-checkbox input:checked~.checkbox {
+    background-image: url(../assets/Checkmark.svg);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.form-checkbox .consent-text {
+    margin: 0 10px;
+    font-size: 12px;
+    color: var(--main-color-gray);
+    line-height: 17px;
+}
+
+.form .btn {
+    font-size: 0.8125rem;
+    padding: 20px 97px;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+
+/* Sekcja footer */
+
+.footer {
+    box-shadow: 0 -5px 40px #00000029;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.page-logo {
+    font-size: 26px;
+}
+
+.footer-copy {
+    font-size: 11px;
+    line-height: 24px;
+    color: var(--color-grey);
+    margin-top: 6px;
+}
+
+.footer-icons a:nth-child(1) {
+    margin-right: 25px;
 }
